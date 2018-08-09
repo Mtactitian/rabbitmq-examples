@@ -85,6 +85,22 @@
                 </dependency>
             </dependencies>
         </profile>
+        <profile>
+            <id>postgre</id>
+            <properties>
+                <profile>postgre</profile>
+                <username>alex581</username>
+                <password>c56810584</password>
+                <dburl>jdbc:postgresql://localhost:5432/alexb</dburl>
+            </properties>
+            <dependencies>
+                <dependency>
+                    <groupId>org.postgresql</groupId>
+                    <artifactId>postgresql</artifactId>
+                    <version>42.2.4</version>
+                </dependency>
+            </dependencies>
+        </profile>
     </profiles>
 
     <build>

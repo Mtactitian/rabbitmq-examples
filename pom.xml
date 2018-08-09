@@ -10,7 +10,6 @@
 
     <name>emp-rabbit-service</name>
 
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -21,6 +20,5 @@
         <module>emp-producer</module>
         <module>emp-consumer</module>
     </modules>
-
 
 </project>

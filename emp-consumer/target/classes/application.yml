@@ -1,12 +1,18 @@
 spring:
   profiles:
-    active: orcl
+    active: postgre
   datasource:
-    url: jdbc:oracle:thin:@localhost:1521:ORCL
+    url: jdbc:postgresql://localhost:5432/alexb
     password: c56810584
-    username: ALEX581
+    username: alex581
   jpa:
     show-sql: true
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+
 alexb:
   queue:
     name: EmpQueue
