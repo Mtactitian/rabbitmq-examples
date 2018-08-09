@@ -1,0 +1,12 @@
+spring:
+  profiles:
+    active: orcl
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:ORCL
+    password: c56810584
+    username: ALEX581
+  jpa:
+    show-sql: true
+alexb:
+  queue:
+    name: EmpQueue

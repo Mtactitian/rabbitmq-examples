@@ -1,0 +1,7 @@
+alexb:
+  queue:
+    name: EmpQueue
+    exchange: EmployeeExchange
+    key: Emp
+server:
+  port: 8081

@@ -1,0 +1,12 @@
+spring:
+  profiles:
+    active: @profile@
+  datasource:
+    url: @dburl@
+    password: @password@
+    username: @username@
+  jpa:
+    show-sql: true
+alexb:
+  queue:
+    name: EmpQueue
