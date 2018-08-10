@@ -1,5 +1,4 @@
 /target/
-!emp-producer/.mvn/wrapper/maven-wrapper.jar
 
 ### STS ###
 .apt_generated
@@ -16,6 +15,12 @@
 *.iml
 *.ipr
 *.class
+
+.iml
+*.DS_Store
+
+emp-producer/target
+emp-consumer/target
 
 ### NetBeans ###
 /nbproject/private/

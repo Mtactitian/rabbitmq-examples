@@ -8,6 +8,8 @@
     <artifactId>emp-rabbit-service</artifactId>
     <version>0-SNAPSHOT</version>
 
+    <packaging>pom</packaging>
+
     <name>emp-rabbit-service</name>
 
     <properties>
