@@ -8,6 +8,7 @@ import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 @Configuration
 @EnableConfigurationProperties
@@ -17,12 +18,20 @@ public class RabbitConfiguration {
     private final EmpQueueProperties empQueueProperties;
 
     @Bean(name = "empTemplate")
-    public RabbitTemplate rabbitTemplate(ConnectionFactory factory) {
+    public RabbitTemplate empRabbitTemplate(ConnectionFactory factory) {
         RabbitTemplate rabbitTemplate = new RabbitTemplate();
         rabbitTemplate.setConnectionFactory(factory);
         rabbitTemplate.setMessageConverter(messageConverter());
         rabbitTemplate.setExchange(empQueueProperties.getExchange());
         rabbitTemplate.setRoutingKey(empQueueProperties.getKey());
+        return rabbitTemplate;
+    }
+
+    @Bean
+    @Primary
+    public RabbitTemplate rabbitTemplate(ConnectionFactory factory) {
+        RabbitTemplate rabbitTemplate = new RabbitTemplate();
+        rabbitTemplate.setConnectionFactory(factory);
         return rabbitTemplate;
     }
 

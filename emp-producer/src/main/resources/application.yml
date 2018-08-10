@@ -5,3 +5,15 @@ alexb:
     key: Emp
 server:
   port: 8081
+spring:
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+  devtools:
+    restart:
+      enabled: false
+logging:
+  level:
+    org.springframework.amqp: trace
