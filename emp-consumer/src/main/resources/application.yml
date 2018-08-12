@@ -21,3 +21,10 @@ spring:
 alexb:
   queue:
     name: EmpQueue
+camel:
+  component:
+    rabbitmq:
+      auto-delete: false
+      declare: false
+      skip-queue-declare: true
+      skip-exchange-declare: true
